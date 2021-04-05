@@ -24,7 +24,7 @@ console.log(variableCube);
 // Если переменная равна “маленький”, присвоить ей значение “большой”,
 //  иначе “маленький”. Сделать тоже самое, используя тернарный оператор.
 let littleBig;
-if (littleBig == 'маленький') {
+if (littleBig === 'маленький') {
     littleBig = 'большой';
 } else {
     littleBig = 'маленький';
@@ -32,7 +32,7 @@ if (littleBig == 'маленький') {
 console.log(littleBig);
 
 // Тернарный оператор:
-littleBig == 'маленький' ?
+littleBig === 'маленький' ?
     littleBig = 'большой' :
     littleBig = 'маленький';
 console.log(littleBig);
