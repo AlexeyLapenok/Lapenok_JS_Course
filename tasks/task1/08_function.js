@@ -46,17 +46,30 @@ console.log(getUniCodes("hello"));
 
 // Написать функцию-рекурсию, которая выведет каждый символ строки в конcоль 
 // ('test') => 't' 'e' 's' 't'
-// function stringRecourse(str) {
-//     let i = 0;
-//     console.log(str.charCodeAt(i));
-//     if (str.length > 1) {
-//         i = str.slice(1, str.length);
-//         return stringRecourse();
-//     }
-// }
-// stringRecourse('test');
+function stringRecourse(str) {
+    let i = 0;
+    console.log(str.charAt(i));
+    if (str.length > 1) {
+        return stringRecourse(str.slice(1, str.length));
+    }
+}
+stringRecourse('test');
 
 // Создать две функции и дать им осмысленные названия:
 // первая функция принимает массив и callback, возвращая строку из обработанного массива.
-
 // вторая функция (callback) обрабатывает каждый элемент массива
+const arr = ["test", "test", "test"];
+
+function returnStringFromArray(array, callback) {
+    console.log(array);
+    callback(array);
+}
+
+returnStringFromArray(arr, function getItemArray(arr) {
+    let str = "";
+    for (let i = 0; i < arr.length; i++) {
+        let t = arr[i];
+        str += t;
+    }
+    console.log(str);
+})
