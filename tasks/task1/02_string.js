@@ -14,11 +14,14 @@ console.log(upperCase);
 
 // Найти положение слова string в строке
 let stringPlace = string.indexOf('string');
-console.log("Слово начинается с " + stringPlace + " символа");
+console.log("Слово начинается с " + stringPlace + " индекса");
 
 // Найти положение второго пробела
-let secondSpacebar = string.indexOf(' exam');
-console.log("Второй пробел это " + secondSpacebar + " символ");
+function findSecondSpace(str) {
+    let index = str.indexOf(' ', str.indexOf(' ') + 1);
+    return index;
+}
+console.log("Второй пробел находиться под индексом " + findSecondSpace('string test example'));
 
 // Получить строку со 2-ого символа длинной 6 букв
 let sixLetters = string.substr(1, 7);
