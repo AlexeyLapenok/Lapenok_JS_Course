@@ -123,9 +123,7 @@ const services = [{ service: "service1", executionTime: 56 },
 { service: "service9", executionTime: 33 }, { service: "service10", executionTime: 42 },];
 // Например, filterServices(services, 20, 60).
 function filterServices(arr, before, after) {
-    return arr.sort((a, b) => a.executionTime > b.executionTime ? -1 : 1)
-        .sort((a, b) => (a.executionTime > before && a.executionTime < after)
-            > (b.executionTime > before && b.executionTime < after) ? 1 : -1)
-        .splice(6, arr.length);
+    let filtered = arr.filter(array => array.executionTime > before && array.executionTime < after);
+    return filtered.sort((a, b) => a.executionTime > b.executionTime ? 1 : -1);
 }
 console.log(filterServices(services, 20, 60));
