@@ -1,23 +1,21 @@
 // Объекты
 
 // Создать объект с полем 'notebook' равным 'MacBook'
-let macbookIs = {
+let notebookInfo = {
     notebook: 'MacBook'
 };
-console.log(macbookIs);
 
 // Добавить в объект из предыдущей задачи поле 'price', равное 1500
 //  и поле currensy, равная 'dollar'
-let macbookPrice = {
+notebookInfo = {
     notebook: 'MacBook',
     price: '1500',
     currensy: 'dollar'
 };
-console.log(macbookPrice);
 
 // Добавить поле details, которое будет содержать объект с полями model
 //  и color (значения этих полей задайте сами)
-let macbookDetails = {
+notebookInfo = {
     notebook: 'MacBook',
     price: 1500,
     currensy: 'dollar',
@@ -26,4 +24,4 @@ let macbookDetails = {
         color: 'space-gray'
     }
 };
-console.log(macbookDetails);
+console.log(notebookInfo);
