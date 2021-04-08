@@ -3,15 +3,11 @@
 // Создать функцию multiply, которая будет принимать любое количество чисел
 //  и возвращать их произведение: multiplay(1,2,3) = 6. 
 //  Если нет ни одного аргумента вернуть ноль.
-function multiply(...args) {
-    let product = 1;
-    if (args.length == 0)
-        return 0;
-    for (let i = 0; i < args.length; i++) {
-        product *= args[i];
-    } return product;
+function multiple(...args) {
+    return args.length == 0 ? 0 : args.reduce((a, b) => a * b);
 }
-console.log(multiply(1, 2, 3));
+
+console.log(multiple(1, 2, 3));
 
 // С помощью ри курсе вычислить факториал числа 10.
 function factorial(n) {
@@ -58,18 +54,26 @@ stringRecourse('test');
 // Создать две функции и дать им осмысленные названия:
 // первая функция принимает массив и callback, возвращая строку из обработанного массива.
 // вторая функция (callback) обрабатывает каждый элемент массива
-const arr = ["test", "test", "test"];
-
-function returnStringFromArray(array, callback) {
-    console.log(array);
-    callback(array);
-}
-
-returnStringFromArray(arr, function getItemArray(arr) {
+function returnStringFromArray(arr, callback) {
     let str = "";
-    for (let i = 0; i < arr.length; i++) {
-        let t = arr[i];
-        str += t;
-    }
-    console.log(str);
-})
+    str = arr.join("");
+    return str;
+}
+function getItemArray(arr) {
+    return arr.map(callback(arr));
+}
+console.log(returnStringFromArray(["test", "test", "test"], getItemArray));
+
+// function returnStringFromArray(array, callback) {
+//     console.log(array);
+//     callback(array);
+// }
+
+// returnStringFromArray(arr, function getItemArray(arr) {
+//     let str = "";
+//     for (let i = 0; i < arr.length; i++) {
+//         let t = arr[i];
+//         str += t;
+//     }
+//     console.log(str);
+// })
