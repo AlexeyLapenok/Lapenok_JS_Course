@@ -38,15 +38,24 @@ console.log("Нечётные числа : " + oddNumber);
 
 // На основе строки "теперь я мастер циклов javascript" создать новую строку, 
 // где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы.
+// let stringMasterCycles = "теперь я мастер циклов javascript";
+// let stringWithoutSpaces = '';
+// stringMasterCycles = stringMasterCycles[0].toUpperCase() +
+//     stringMasterCycles.slice(1, stringMasterCycles.length);
+// for (i = 0; i < stringMasterCycles.length; i++) {
+//     stringWithoutSpaces += (stringMasterCycles[i - 1] == ' ') ?
+//         stringMasterCycles[i].toUpperCase() : stringMasterCycles[i];
+// }
+// if (true) {
+//     stringWithoutSpaces = stringWithoutSpaces.replace(/\s+/g, '');
+// }
+// console.log(stringWithoutSpaces);
+
 let stringMasterCycles = "теперь я мастер циклов javascript";
 let stringWithoutSpaces = '';
-stringMasterCycles = stringMasterCycles[0].toUpperCase() +
-    stringMasterCycles.slice(1, stringMasterCycles.length);
 for (i = 0; i < stringMasterCycles.length; i++) {
-    stringWithoutSpaces += (stringMasterCycles[i - 1] == ' ') ?
-        stringMasterCycles[i].toUpperCase() : stringMasterCycles[i];
-}
-if (true) {
-    stringWithoutSpaces = stringWithoutSpaces.replace(/\s+/g, '');
+    stringWithoutSpaces += (stringMasterCycles[i - 1] == ' ') || (i === 0)
+        ? stringMasterCycles[i].toUpperCase() : stringMasterCycles[i]
+            .split(" ").join("");
 }
 console.log(stringWithoutSpaces);
