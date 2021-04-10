@@ -8,21 +8,21 @@ console.log(returnLastItem([1, 3, 6]));
 
 // Создать такую функцию, которая принимала бы массив [1,3,6],
 //  а возвращала новый массив с дублированными элементами [1,3,6,1,3,6].
-function returnDoubleItem(myArray) {
+function returnDoubleItems(myArray) {
     return myArray.concat(myArray);
 }
-console.log(returnDoubleItem([1, 3, 6]));
+console.log(returnDoubleItems([1, 3, 6]));
 
 // Создать такую функцию, которая принимала бы любое число,
 //  а возвращала массив, заполненный числами от 1 до n.
-function returnAnyNumber(anyNumber) {
+function returnArrayOfNNambers(anyNumber) {
     let getNewArray = [];
     for (let i = 1; i <= anyNumber; i++) {
         getNewArray.push(i);
     }
     return getNewArray;
 }
-console.log(returnAnyNumber(5));
+console.log(returnArrayOfNNambers(5));
 
 // Создать такую функцию, которая принимала бы любое число массивов и
 //  удаляла из каждого массива первый элемент, а возвращала массив оставшихся
@@ -40,17 +40,17 @@ console.log(deleteFirstItem([1, 2, 3], ['x', 'y', 'z']));
 
 // Создать функцию, которая упорядочит буквы в строке "екважбигёзд" в
 //  алфавитном порядке и возвратит строку в обратном порядке ("кизжёедгвба").
-function sortString(str) {
+function sortStringAlphabetically(str) {
     return str.split('').sort((a, b) => a.localeCompare(b)).reverse().join('');
 }
-console.log(sortString('екважбигёзд'));
+console.log(sortStringAlphabetically('екважбигёзд'));
 
 
 // Используя функцию, отсортировать массив [5, 2, -1, 6, 9, -9, 3] в обратном порядке.
-function sortNumbers(arr) {
+function sortNumbersReverse(arr) {
     return arr.sort().reverse();
 }
-console.log(sortNumbers([5, 2, -1, 6, 9, -9, 3]));
+console.log(sortNumbersReverse([5, 2, -1, 6, 9, -9, 3]));
 
 // Создать функцию, которая принимает 3 аргумента: любой произвольный массив начальный 
 // номер элемента в массиве конечный номер
@@ -87,11 +87,11 @@ console.log(array3);
 
 // Отсортировать массив массив таким образом, чтобы вначале шли массивы с
 //  наименьшей длиной. Создать копию произвольного массив"
-function sortCopy(arg) {
+function sortByArrayLength(arg) {
     let clone = arg.slice(0);
     return clone.sort((a, b) => a.length > b.length ? 1 : -1);
 }
-console.log(sortCopy([[1, 2, 3, 4], [2, 3], [4, 4, 5]]));
+console.log(sortByArrayLength([[1, 2, 3, 4], [2, 3], [4, 4, 5]]));
 
 
 // Отсортировать массив объектов по возрастающему количеству ног животных:
@@ -122,8 +122,8 @@ const services = [{ service: "service1", executionTime: 56 },
 { service: "service7", executionTime: 82 }, { service: "service8", executionTime: 19 },
 { service: "service9", executionTime: 33 }, { service: "service10", executionTime: 42 },];
 // Например, filterServices(services, 20, 60).
-function filterServices(arr, before, after) {
+function filterSortObjects(arr, before, after) {
     let filtered = arr.filter(array => array.executionTime > before && array.executionTime < after);
     return filtered.sort((a, b) => a.executionTime > b.executionTime ? 1 : -1);
 }
-console.log(filterServices(services, 20, 60));
+console.log(filterSortObjects(services, 20, 60));
