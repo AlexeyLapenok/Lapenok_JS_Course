@@ -3,11 +3,11 @@
 // Создать функцию multiply, которая будет принимать любое количество чисел
 //  и возвращать их произведение: multiplay(1,2,3) = 6. 
 //  Если нет ни одного аргумента вернуть ноль.
-function multiple(...args) {
+function multiplay(...args) {
     return args.length == 0 ? 0 : args.reduce((a, b) => a * b);
 }
 
-console.log(multiple(1, 2, 3));
+console.log(multiplay(1, 2, 3));
 
 // С помощью ри курсе вычислить факториал числа 10.
 function factorial(n) {
@@ -17,17 +17,17 @@ console.log("Факториал 10 = " + factorial(10));
 
 // Создать функцию, которая принимает строку и возвращает
 //  перевернутую строку ('test') = 'tset'.
-function reverseTest(str) {
+function reverseString(str) {
     return str.split('').reverse().join('');
 }
-console.log("('test') = " + reverseTest('test'));
+console.log("('test') = " + reverseString('test'));
 
 // Написать функцию, которая проверяет является ли слово палиндромом
-function palindrome(str) {
+function isPalindrome(str) {
     return Array.prototype.reverse.call(str.split(''))
         .join('').toLowerCase() == str.toLowerCase();
 }
-console.log("is polindrom? " + palindrome('Texet'));
+console.log("is polindrom? " + isPalindrome('Texet'));
 
 
 // Создать функцию, которая в качестве аргумента принимает
@@ -54,26 +54,12 @@ stringRecourse('test');
 // Создать две функции и дать им осмысленные названия:
 // первая функция принимает массив и callback, возвращая строку из обработанного массива.
 // вторая функция (callback) обрабатывает каждый элемент массива
-function returnStringFromArray(arr, callback) {
-    let str = "";
-    str = arr.join("");
-    return str;
+let arr = ["test", "test", "test"];
+function returnStringFromArray(array, callback) {
+    return callback(array).join('');
 }
-function getItemArray(arr) {
-    return arr.map(callback(arr));
+console.log(returnStringFromArray(arr, addWordToArray));
+
+function addWordToArray(array) {
+    return array.map(str => str + "successful");
 }
-console.log(returnStringFromArray(["test", "test", "test"], getItemArray));
-
-// function returnStringFromArray(array, callback) {
-//     console.log(array);
-//     callback(array);
-// }
-
-// returnStringFromArray(arr, function getItemArray(arr) {
-//     let str = "";
-//     for (let i = 0; i < arr.length; i++) {
-//         let t = arr[i];
-//         str += t;
-//     }
-//     console.log(str);
-// })
