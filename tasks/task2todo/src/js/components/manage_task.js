@@ -61,8 +61,8 @@ list.addEventListener('click', (e) => {
   }
 });
 const emptyTask = document.querySelector('.empty-task');
-const listTask = list.children;
 const toggleEmptyListMessage = function () {
+  const listTask = list.children;
   if (listTask.length === 0) {
     emptyTask.style.display = 'flex';
   } else {

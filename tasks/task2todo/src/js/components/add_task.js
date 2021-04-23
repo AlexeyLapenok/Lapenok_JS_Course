@@ -2,7 +2,7 @@ const list = document.querySelector('.list-container_task-list');
 const input = document.querySelector('.add-container_task-form--input');
 const form = document.querySelector('.add-container_task-form');
 const emptyTask = document.querySelector('.empty-task');
-const listTask = list.children;
+
 // Saving to localStorage
 window.onload = () => {
   list.innerHTML = localStorage.getItem('ToDo');
@@ -12,7 +12,8 @@ function updateLocalStorage() {
 }
 
 const toggleEmptyListMessage = function () {
-  if (listTask.length === 0) {
+  const listTask = list.children;
+  if (listTask.length > 0) {
     emptyTask.style.display = 'none';
   } else {
     emptyTask.style.display = 'none';
