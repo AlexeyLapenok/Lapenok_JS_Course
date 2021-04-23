@@ -827,8 +827,14 @@ html {
   }
 
   .add-container_task-form--input {
+    width: 97%;
     height: auto;
     margin-bottom: 2px;
+  }
+
+  .add-container_task-form--add {
+    margin-right: 3%;
+    width: 160px;
   }
 
   .list-container_task-list li {
