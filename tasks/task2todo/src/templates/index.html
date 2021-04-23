@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>To Do App</title>
+</head>
+
+<body class="page">
+    <h1 class="none">Task list</h1>
+    <div class="background">
+    </div>
+    <div class="container">
+        <header class="header">
+            <img class="header_logo" src="../images/content/Logo.svg" alt="Logo SENLA">
+            <input class="header_input header_input-icon" type="search" placeholder="Search task for to do"
+                tabindex="1">
+        </header>
+        <main>
+            <section class="submenu-container">
+                <ul class="submenu-container_submenu">
+                    <li class="submenu-container_submenu_all select" tabindex="2">All</li>
+                    <li class="submenu-container_submenu_active" tabindex="3">Active</li>
+                    <li class="submenu-container_submenu_done" tabindex="4">Done</li>
+                </ul>
+            </section>
+            <section class="add-container">
+                <form class="add-container_task-form" action=# method="post">
+                    <label class="add-container_task-form--input-label" for="task-input">New Task</label>
+                    <textarea type="text" class="add-container_task-form--input" id="task-input" required></textarea>
+                    <button type="submit" class="add-container_task-form--add">ADD</button>
+                </form>
+            </section>
+            <section class="list-container">
+                <ul class="list-container_task-list"> </ul>
+            </section>
+            <div class="empty-task">
+                <p class="empty-task_text">No new tasks?<br>Add them.</p>
+                <div class="empty-task_wrap">
+                    <img class="empty-task_wrap_img" src="../images/content/bear.svg" alt="puzzled bear">
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

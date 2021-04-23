@@ -1,0 +1,74 @@
+@media screen and (max-width: 767px) {
+    .page {
+        max-width: 320px;
+    }
+    .background {
+        right: auto;
+        background-size: 55%;
+    }
+    .container {
+        min-width: 280px;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header {
+        position: sticky;
+        top: 0px;
+        min-width: 286px;
+        background-color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        margin-bottom: 5px;
+        &_logo {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            animation-name: appearance-logo;
+            animation-duration: 2s;
+              @keyframes appearance-logo {
+                0% {
+                    opacity: 0;
+                  transform: translateX(-300px);
+                }
+                
+                100% {
+                  transform: translateX(0px);
+                }
+              
+              }
+        }
+        &_input {
+            min-width: 247px;
+            height: 25px;
+            font-size: 10px;
+        }
+        &_input-icon {
+                margin-left: 0px;
+        }
+    }
+    .submenu-container {
+        &_submenu{
+            margin-bottom: 0px;
+            margin-top: 10px;
+            & li {
+                margin-top: 2px;
+                padding-top: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+    .add-container_task-form--input{
+        width: 314px;
+        height: auto;
+        margin-bottom: 2px;
+    }
+    .list-container {
+        &_task-list {
+            & li {
+                min-height: 20px;
+                padding-top: 10px;
+            } 
+        }
+    }
+}
