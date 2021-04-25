@@ -1,9 +1,11 @@
 const list = document.querySelector('.list-container_task-list');
 // Saving to localStorage
 window.onload = () => {
+  // eslint-disable-next-line no-undef
   list.innerHTML = localStorage.getItem('ToDo');
 };
 function updateLocalStorage() {
+  // eslint-disable-next-line no-undef
   localStorage.setItem('ToDo', list.innerHTML);
 }
 // deleting a task
